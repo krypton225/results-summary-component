@@ -1,0 +1,29 @@
+include ./mixins/_index
+
+doctype html
+html(lang="en")
+
+    head
+        +meta-data("Khaled Mohamed")
+        +meta-desc("Just a description for Manage Landing Page project as landing page!")
+        +meta-words("HTML, PugJS, CSS, SCSS, PostCSS")
+        +meta-theme("")
+
+        link(rel="shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
+        link(rel="manifest" href="./public/assets/favicons/site.webmanifest")
+
+        +space()
+
+        title 
+
+        +space()
+        link(rel="stylesheet" href="./public/index.css")
+
+    body
+        main(class="main" id="main")
+
+        +space()
+
+        script(src="./public/main.bundle.js")
+
+        +no-script()

@@ -1,0 +1,24 @@
+include ../global/_space
+
+mixin meta-data(author = "Author Name")
+    meta(charset="UTF-8")
+    meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(http-equiv="X-UA-Compatible" content="IE=7")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    +space()
+    meta(name="author" content=author)
+    +space()
+
+mixin meta-desc(contentOfDescription)
+    meta(name="description" content=contentOfDescription)
+    +space()
+
+mixin meta-words(words)
+    meta(name="keywords", content=words)
+    +space()
+
+mixin meta-theme(color)
+    meta(name="theme-color" content=color)
+    +space()
+

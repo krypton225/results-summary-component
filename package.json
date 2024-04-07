@@ -1,0 +1,61 @@
+{
+    "name": "results-summary-component",
+    "version": "0.0.1",
+    "description": "This is a challenge from frontendmentor website.",
+    "markdown": "github",
+    "license": "MIT",
+    "main": "index.js",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://opensource.org/license/mit/"
+        }
+    ],
+    "author": "Khaled Mohamed <k.mohamed.11.98@gmail.com> (https://github.com/krypton225)",
+    "contributors": [
+        "Khaled Mohamed"
+    ],
+    "bugs": {
+        "url": "https://github.com/krypton225/results-summary-component/issues"
+    },
+    "keywords": [
+        "SCSS",
+        "SASS",
+        "JavaScript",
+        "PostCSS"
+    ],
+    "repository": {
+        "url": "https://github.com/krypton225/results-summary-component",
+        "type": "git"
+    },
+    "scripts": {
+        "dev": "concurrently --prefix-colors=\"magenta,cyan,white,yellow,blue\" \"npm run postcss:watch\" \"npm run pug-js\" \"npm run server\" \"npm run watcher\" \"npm run out-wpk-dev\"",
+        "start": "concurrently --prefix-colors=\"magenta,cyan,yellow\" \"npm run server\" \"npm run postcss:watch\" \"npm run out-wpk-production\"",
+        "watcher": "concurrently --prefix-colors=\"red\" \"npm run sass:watch\"",
+        "postcss:watch": "postcss src/styles/*.css --dir public --use autoprefixer cssnano --watch",
+        "sass:watch": "sass --no-source-map ./src/scss/:src/styles/ --watch",
+        "server": "live-server --open=./index.html",
+        "out-wpk-dev": "webpack --mode=development --watch",
+        "out-wpk-production": "webpack --mode=production",
+        "pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
+        "upgrade": "ncu --upgrade",
+        "tags": "git push repo --tags",
+        "gen:lock": "npm i --package-lock-only"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.19",
+        "concurrently": "^8.2.2",
+        "cssnano": "^6.1.2",
+        "live-server": "^1.2.2",
+        "npm-check-updates": "^16.14.18",
+        "postcss": "^8.4.38",
+        "postcss-cli": "^11.0.0",
+        "postcss-preset-env": "^9.5.4",
+        "pug": "^3.0.2",
+        "pug-cli": "^1.0.0-alpha6",
+        "sass": "^1.74.1",
+        "sass-pire": "^1.6.5",
+        "webpack": "^5.91.0",
+        "webpack-cli": "^5.1.4"
+    }
+}
