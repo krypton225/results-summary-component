@@ -1,0 +1,12 @@
+@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
+
+.btn {
+    padding-block: px-to-rem(8);
+    border: 0;
+    outline: 0;
+    border-radius: px-to-rem(25);
+    background-color: var(--fem-dark-gray-blue-clr);
+    color: var(--fem-white-clr);
+    text-transform: capitalize;
+    cursor: pointer;
+}

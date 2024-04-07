@@ -1,0 +1,47 @@
+@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
+
+.card {
+    padding-inline: px-to-rem(10);
+    padding-block: px-to-rem(10);
+    border-radius: px-to-rem(6);
+    @include flex-between-center();
+
+    &__left {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__img {
+        @include flex-center-center();
+    }
+
+    &__title {
+        text-transform: capitalize;
+    }
+
+    &__percentage {
+        .hundred {
+            color: var(--fem-white-2-clr);
+        }
+    }
+
+    &.card-reaction {
+        background-color: var(--fem-lighter-red-clr);
+        color: var(--fem-light-red-clr);
+    }
+
+    &.card-memory {
+        background-color: var(--fem-lighter-yellow-clr);
+        color: var(--fem-orangey-yellow-clr);
+    }
+
+    &.card-verbal {
+        background-color: var(--fem-lighter-green-clr);
+        color: var(--fem-green-teal-clr);
+    }
+
+    &.card-visual {
+        background-color: var(--fem-lighter-blue-clr);
+        color: var(--fem-cobalt-blue-clr);
+    }
+}

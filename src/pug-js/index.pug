@@ -7,20 +7,39 @@ html(lang="en")
         +meta-data("Khaled Mohamed")
         +meta-desc("Just a description for Manage Landing Page project as landing page!")
         +meta-words("HTML, PugJS, CSS, SCSS, PostCSS")
-        +meta-theme("")
+        +meta-theme("#2e2be9")
 
         link(rel="shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
         link(rel="manifest" href="./public/assets/favicons/site.webmanifest")
 
         +space()
 
-        title 
+        title Front End Mentor Challenge
 
         +space()
         link(rel="stylesheet" href="./public/index.css")
 
     body
         main(class="main" id="main")
+            section(class="content")
+                div(class="left")
+                    span(class="left__title") your result
+
+                    div(class="left__circle")
+                        span(class="percentage") 76 
+                        span(class="hundred") of 100
+
+                    span(class="left__title--second") great
+
+                    p(class="left__desc") you scored higher than 65% of the people who have taken these tests.
+
+                div(class="right")
+                    span(class="right__title") summary
+
+                    div(class="right__cards")
+                    //- Will be render all cards from JS here..
+
+                    button(class="btn") continue
 
         +space()
 

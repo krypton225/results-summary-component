@@ -1,0 +1,39 @@
+@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
+
+@font-face {
+    font-display: swap;
+    font-family: "Hanken Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/Hanken-Grotesk/hanken-grotesk-v8-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Hanken Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/Hanken-Grotesk/hanken-grotesk-v8-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Hanken Grotesk";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./assets/fonts/Hanken-Grotesk/hanken-grotesk-v8-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+    --fem-font-family: "Hanken Grotesk", sans-serif;
+}
+
+::selection {
+    background-color: var(--fem-cobalt-blue-clr);
+    color: var(--fem-white-clr);
+}
+
+body {
+    font-family: var(--fem-font-family);
+    background-color: var(--fem-pale-blue-clr);
+}
