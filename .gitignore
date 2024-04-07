@@ -1,0 +1,45 @@
+# Avoid accidental upload of the Sketch and Figma design files
+#####################################################
+
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+###############################################
+
+*.xd
+
+# Avoid all following files
+###############################################
+
+.DS_Store
+.prettierignore
+Thumbs.db
+
+node_modules
+/.vscode/*
+!.vscode/settings.json
+
+*.sublime-project
+*.sublime-workspace
+*.idea/
+
+*.suo
+*.ntvs*
+*.log
+*.log.*
+*.tmp
+
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production
+
+/bower_components/
+*.pyc
+*.class
+*.jar
+
+# Add your custom under the following line
+###############################################
