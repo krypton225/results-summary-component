@@ -6,8 +6,16 @@
     border-radius: px-to-rem(6);
     @include flex-between-center();
 
+    @include mq-gen(min, w, mob-min) {
+        font-size: px-to-rem(14);
+    }
+
+    @include mq-gen(min, w, xs) {
+        font-size: px-to-rem(16.25);
+    }
+
     &__left {
-        display: flex;
+        @include d-flex();
         gap: 1rem;
     }
 
