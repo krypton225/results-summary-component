@@ -1,7 +1,6 @@
 @use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
 
 .main {
-    // max-width: px-to-rem(600);
     min-height: 100dvh;
     display: grid;
     place-content: center;
@@ -9,22 +8,32 @@
     .content {
         max-width: px-to-rem(600);
         display: grid;
-        grid-template-columns: 1fr 1fr;
         border-radius: px-to-rem(20);
         background-color: var(--fem-white-clr);
         box-shadow: px-to-rem(10) px-to-rem(6) px-to-rem(17) px-to-rem(5) #00000026;
 
+        @include mq-gen(min, w, mob-min) {
+            grid-template-columns: 1fr;
+        }
+
+        @include mq-gen(min, w, xs) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         .right,
         .left {
-            padding-block: px-to-rem(48);
+            @include mq-gen(min, w, mob-min) {
+                padding-block: px-to-rem(40);
+            }
+
+            @include mq-gen(min, w, xs) {
+                padding-block: px-to-rem(48);
+            }
         }
 
         .left {
             padding-inline: px-to-rem(36);
-            border-radius: px-to-rem(20);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex-start-center(col);
             gap: px-to-rem(16);
             color: var(--fem-light-lavender-clr);
             background: var(--fem-light-slate-blue-bg-clr);
@@ -44,13 +53,42 @@
                 var(--fem-light-royal-blue-bg-clr)
             );
 
+            @include mq-gen(min, w, mob-min) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: px-to-rem(20);
+                border-bottom-right-radius: px-to-rem(20);
+            }
+
+            @include mq-gen(min, w, xs) {
+                border-radius: px-to-rem(20);
+            }
+
+            @media (min-height: 845px) {
+                border-radius: px-to-rem(20);
+            }
+
             &__title {
-                font-size: 1.5rem;
                 text-transform: capitalize;
 
+                @include mq-gen(min, w, mob-min) {
+                    font-size: 1.25rem;
+                }
+
+                @include mq-gen(min, w, xs) {
+                    font-size: 1.5rem;
+                }
+
                 &--second {
-                    font-size: 1.75rem;
                     text-transform: capitalize;
+
+                    @include mq-gen(min, w, mob-min) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include mq-gen(min, w, xs) {
+                        font-size: 1.75rem;
+                    }
                 }
             }
 
@@ -79,12 +117,18 @@
                 );
 
                 .percentage {
-                    font-size: px-to-rem(64);
+                    @include mq-gen(min, w, mob-min) {
+                        font-size: px-to-rem(48);
+                    }
+
+                    @include mq-gen(min, w, xs) {
+                        font-size: px-to-rem(64);
+                    }
                 }
             }
 
             &__desc {
-                // width: 70%;
+                font-size: px-to-rem(16);
                 text-align: center;
             }
         }
@@ -95,17 +139,28 @@
             flex-direction: column;
             gap: px-to-rem(16);
 
+            @include mq-gen(min, w, mob-min) {
+                padding-block: px-to-rem(39.2);
+            }
+
             &__title {
-                font-size: 1.5rem;
                 text-transform: capitalize;
+
+                @include mq-gen(min, w, mob-min) {
+                    font-size: 1.25rem;
+                }
+
+                @include mq-gen(min, w, xs) {
+                    font-size: 1.5rem;
+                }
             }
 
             &__cards {
                 flex-grow: 1;
                 display: flex;
                 flex-direction: column;
-                gap: px-to-rem(16);
                 justify-content: space-evenly;
+                gap: px-to-rem(16);
             }
         }
     }
