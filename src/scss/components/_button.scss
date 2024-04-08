@@ -9,4 +9,19 @@
     color: var(--fem-white-clr);
     text-transform: capitalize;
     cursor: pointer;
+    transition: background-color 0.33s ease-in-out;
+
+    &:hover {
+        background: -moz-linear-gradient(
+            180deg,
+            var(--fem-light-slate-blue-bg-clr) 0%,
+            var(--fem-light-royal-blue-bg-clr)
+        );
+        background: -webkit-linear-gradient(
+            180deg,
+            var(--fem-light-slate-blue-bg-clr) 0%,
+            var(--fem-light-royal-blue-bg-clr)
+        );
+        background: linear-gradient(180deg, var(--fem-light-slate-blue-bg-clr) 0%, var(--fem-light-royal-blue-bg-clr));
+    }
 }
